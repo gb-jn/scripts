@@ -26,7 +26,7 @@ export VISUAL=vi
 
 
 ### Lesspipe is an input preprocessor for less.  It allows less to show .pdf's, archives, and other file types in a meaningful way.
-### ---  If /usr/bin/lesspipe exists and is executable(-x) then
+### ---  If /usr/bin/lesspipe exists and is executable(test -x) then
 ### ---  Sets and exports LESSOPEN so less uses lesspipe automatically.
 ### ---
 if test -x /usr/bin/lesspipe; then
@@ -61,7 +61,7 @@ export HISTSIZE=5000
 export HISTFILESIZE=10000
 
 
-### --- Sets vi mode for bash history navigation
+### --- Sets vi mode for bash history navigation (remember that it will be in "insert" mode to start with, will need to "esc" to get into "normal" mode)
 set -o vi
 
 ### Enables (sets) histappend. Without histappend, the history won't be saved betweeen sessions, it will be clobbered on every exit.
